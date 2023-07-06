@@ -14,4 +14,15 @@ export const coursesController = {
       }
     }
   },
+
+  featured: async (req: Request, res: Response) => {
+    try {
+      const featuredCourses = await courseService.getRandomFeaturedCourses();
+      return res.json(featuredCourses);
+    } catch (err) {
+      if (err instanceof Error) {
+        return res.status(400).json({ message: err.message });
+      }
+    }
+  },
 };
