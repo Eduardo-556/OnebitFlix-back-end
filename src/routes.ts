@@ -15,6 +15,7 @@ router.get("/courses/newest", coursesController.newest);
 router.get("/courses/search", ensureAuth, coursesController.search);
 router.get("/courses/:id", ensureAuth, coursesController.show);
 router.get("/episodes/stream", ensureAuthviaQuery, episodesController.stream);
+router.get("/favorites", ensureAuth, favoriteController.index);
 router.post("/favorites", ensureAuth, favoriteController.save);
 
 export { router };
