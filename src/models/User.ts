@@ -1,6 +1,7 @@
 import { DataTypes, Model, Optional } from "sequelize";
 import { sequelize } from "../database";
 import bcrypt from "bcrypt";
+import { EpisodeInstance } from "./Episode";
 
 export interface User {
   id: number;
@@ -21,6 +22,7 @@ export interface UserCreationAttributes extends Optional<User, "id"> {}
 export interface UserInstance
   extends Model<User, UserCreationAttributes>,
     User {
+  Episodes?: EpisodeInstance[];
   checkPassword: (password: string, callbackfn: CheckPasswordCallback) => void;
 }
 export const User = sequelize.define<UserInstance, User>(
