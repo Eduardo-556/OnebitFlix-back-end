@@ -34,5 +34,11 @@ router.delete("/favorites/:id", ensureAuth, favoriteController.delete);
 router.post("/likes", ensureAuth, likesController.save);
 router.delete("/likes/:id", ensureAuth, likesController.delete);
 router.get("/users/current", ensureAuth, usersController.show);
+router.put("/users/current", ensureAuth, usersController.update);
 router.get("/users/current/watching", ensureAuth, usersController.watching);
+router.put(
+  "/users/current/password",
+  ensureAuth,
+  usersController.updatePassword
+);
 export { router };
