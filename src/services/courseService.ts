@@ -4,7 +4,7 @@ import { Course } from "../models";
 export const courseService = {
   findByWithEpisodes: async (id: string) => {
     const courseWithEpisodes = await Course.findByPk(id, {
-      attributes: ["id", "name", "synopsis", ["thumbnail_url", "thumbanilUrl"]],
+      attributes: ["id", "name", "synopsis", ["thumbnail_url", "thumbnailUrl"]],
       include: {
         association: "episodes",
         attributes: [
