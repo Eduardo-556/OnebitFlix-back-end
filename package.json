@@ -17,7 +17,6 @@
     "@adminjs/express": "^5.1.0",
     "@adminjs/sequelize": "^3.0.0",
     "@adminjs/upload": "^3.0.1",
-    "@types/jsonwebtoken": "^9.0.2",
     "adminjs": "^6.8.7",
     "bcrypt": "~5.0.1",
     "connect-session-sequelize": "^7.1.7",
@@ -31,6 +30,7 @@
     "sequelize": "^6.32.1"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.2",
     "@types/bcrypt": "~5.0.0",
     "@types/cors": "^2.8.13",
     "@types/express": "~4.17.13",
